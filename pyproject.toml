@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "causal-har-agent"
+version = "0.1.0"
+description = "Combining Human Activity Recognition (HAR) Time-Series with LLM-Powered Causal Discovery and Causal-Guided Transformer Architectures"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Causal-HAR Research Team", email = "research@causal-har.org" }
+]
+keywords = [
+    "human-activity-recognition",
+    "causal-inference",
+    "gemini-api",
+    "deep-learning",
+    "transformers",
+    "time-series-robustness",
+    "structural-causal-models"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.23.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "google-genai>=2.4.0",
+    "networkx>=3.0",
+    "scikit-learn>=1.2.0",
+    "pydantic>=2.0.0",
+    "tqdm>=4.65.0",
+    "matplotlib>=3.7.0",
+    "tabulate>=0.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.0",
+    "black>=23.3.0",
+    "flake8>=6.0.0",
+    "mypy>=1.3.0",
+    "isort>=5.12.0",
+]
+
+[project.scripts]
+causal-discover = "scripts.run_causal_discovery:main"
+causal-eval = "scripts.evaluate_robustness:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

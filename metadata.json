@@ -1,0 +1,6 @@
+{
+  "name": "Causal-HAR-Agent",
+  "description": "Academic framework combining Human Activity Recognition (HAR) time-series data with LLM-powered Causal Discovery (Gemini) and Causal-Guided Robust Transformer architectures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
