@@ -74,8 +74,6 @@ causal-har-agent/
     └── evaluation/
         ├── __init__.py
         └── robustness_metrics.py      # OOD perturbation sweeps, dropouts, and F1 metrics
-```
-
 ---
 
 ## 4. Installation & Quickstart
