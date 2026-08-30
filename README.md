@@ -29,7 +29,7 @@ $$\mathbf{A}_{\text{causal}} = \text{Softmax}\left( \frac{\mathbf{Q}\mathbf{K}^\
 ## 2. Mathematical Formulation
 
 ### 2.1 Structural Causal Model (SCM) for Kinematics
-Let $\mathcal{S} = \{X_1, X_2, \dots, X_K\}$ represent the $K$ sensor modality streams (e.g., $X_{\text{acc\_x}}, X_{\text{acc\_y}}, X_{\text{acc\_z}}, X_{\text{gyro\_x}}, X_{\text{gyro\_y}}, X_{\text{gyro\_z}}$ across ankle, thigh, chest, wrist).
+Let $\mathcal{S} = \{X_1, X_2, \dots, X_K\}$ represent the $K$ sensor modality streams (e.g., $X_{acc-x}, X_{acc-y}, X_{acc-z}, X_{gyro-x}, X_{gyro-y}, X_{gyro-z}$ across ankle, thigh, chest, wrist).
 The kinematic data generating process is defined by an SCM $\mathfrak{M} = \langle \mathcal{S}, \mathcal{U}, \mathcal{F}, P(\mathcal{U}) \rangle$:
 $$X_i := f_i(\mathbf{Pa}(X_i), U_i), \quad \forall i \in \{1, \dots, K\}$$
 where $\mathbf{Pa}(X_i)$ denotes direct causal parents in graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, and $U_i$ are independent exogenous noise terms.
